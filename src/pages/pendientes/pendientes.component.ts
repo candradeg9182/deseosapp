@@ -1,4 +1,6 @@
 import { Component, OnInit} from '@angular/core';
+import { ListaDeseosService } from "../../app/services/lista-deseos.service";
+
 
 @Component({
     selector: 'app-pendientes',
@@ -6,7 +8,8 @@ import { Component, OnInit} from '@angular/core';
 })
 
 export class pendientesComponent implements OnInit {
-    constructor() {}
+    
+    constructor(private _listaDeseo:ListaDeseosService) {  }
 
     ngOnInit(){}
 }
