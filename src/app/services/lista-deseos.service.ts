@@ -21,7 +21,28 @@ export class ListaDeseosService{
         // this.listas.push(lista2)
         // this.listas.push(lista3)
 
+        this.cargarData();
+
         console.log("servicio inicializado")
+    }
+
+
+    actualizarData(){
+
+        localStorage.setItem("data",JSON.stringify(this.listas)) //ocupo convertir la listas
+                                                                //a string para poder usar el setItem
+    }
+
+    cargarData(){
+        if(localStorage.getItem("data")){
+         this.listas = JSON.parse(localStorage.getItem("data")) //convierte el json en un objeto
+        }
+        
+    }
+
+    agregarLista(lista:Lista){
+        this.listas.push(lista);
+        this.actualizarData();
     }
 
 }
