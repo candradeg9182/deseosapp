@@ -37,7 +37,7 @@
         
         
         <!-- Items -->
-        <ion-card>
+        <ion-card *ngIf="items.length>0">
            <ion-card-header>
              <h3>Items agregados</h3>
            </ion-card-header>
@@ -48,7 +48,7 @@
               <ion-item *ngFor="let item of items; let i = index">
                 <button ion-button color="dark" clear> {{ item.nombre }} </button>
 
-                <button ion-button outline item-right color="danger" clear>
+                <button (click)="desagregar(i)" ion-button outline item-right color="danger" clear>
                     <!-- Advanced: explicity set the icon for each platform -->
                     <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
                   Borrar item {{ i }}</button>
@@ -63,7 +63,8 @@
 
         </ion-card>
 
-        <button ion-button icon-left class="button-lock">
+        <button (click)="guardarLista()"
+                ion-button icon-left class="button-lock">
             <!-- Advanced: explicity set the icon for each platform -->
             <ion-icon ios="ios-add-circle" md="md-add-circle"></ion-icon>
           Agregar lista
