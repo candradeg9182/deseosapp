@@ -57,7 +57,8 @@ export class agregarComponent implements OnInit {
         let lista = new Lista(this.nombreLista);
         lista.items = this.items;
 
-        this.service.listas.push( lista );
+        //this.service.listas.push( lista );
+        this.service.agregarLista( lista );
         this.NavCtrl.pop(); //[para devolverse a la pagina de donde vino]
     }
 }
