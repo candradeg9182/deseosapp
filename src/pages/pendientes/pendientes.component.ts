@@ -15,7 +15,7 @@ import { DetalleComponent } from "../detalle/detalle.component";
 
 export class pendientesComponent implements OnInit {
     
-    constructor(private _listaDeseo:ListaDeseosService, 
+    constructor(private service:ListaDeseosService, 
                 private NavCtrl:NavController) //navcontroller para moverse entre pages
                 
                 {  }

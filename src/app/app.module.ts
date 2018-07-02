@@ -19,6 +19,9 @@ import { ListaDeseosService } from "../app/services/lista-deseos.service";
 import { placeholderPipe } from "../pipes/placeholder.pipe";
 import { DetalleComponent } from "../pages/detalle/detalle.component";
 
+import { PendientePipe } from "../pipes/pendientes.pipe";
+import { terminadosPipe } from "../pipes/terminados.pipes";
+
 @NgModule({
   declarations: [
     MyApp,
@@ -27,6 +30,8 @@ import { DetalleComponent } from "../pages/detalle/detalle.component";
     terminadosComponent,
     agregarComponent,
     placeholderPipe,
+    PendientePipe,
+    terminadosPipe,
     DetalleComponent
 
   ],

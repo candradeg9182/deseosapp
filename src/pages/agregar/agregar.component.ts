@@ -56,6 +56,7 @@ export class agregarComponent implements OnInit {
 
         let lista = new Lista(this.nombreLista);
         lista.items = this.items;
+        lista.terminado = false;
 
         //this.service.listas.push( lista );
         this.service.agregarLista( lista );

@@ -3,11 +3,11 @@ import { Lista } from "../app/clases/index";
 
 
 @Pipe({
-    name:'pendientes',
+    name:'terminados',
     pure: false
 })
-export class PendientePipe implements PipeTransform {
-    transform(listas: Lista[], estado:boolean = false) :Lista[] {
+export class terminadosPipe implements PipeTransform {
+    transform(listas: Lista[], estado:boolean = true) :Lista[] {
         
         let listaFiltrada:Lista[] = [];
 
