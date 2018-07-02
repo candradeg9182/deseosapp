@@ -17,6 +17,10 @@ import { ListaDeseosService } from "../app/services/lista-deseos.service";
 
 
 import { placeholderPipe } from "../pipes/placeholder.pipe";
+import { DetalleComponent } from "../pages/detalle/detalle.component";
+
+import { PendientePipe } from "../pipes/pendientes.pipe";
+import { terminadosPipe } from "../pipes/terminados.pipes";
 
 @NgModule({
   declarations: [
@@ -25,7 +29,10 @@ import { placeholderPipe } from "../pipes/placeholder.pipe";
     pendientesComponent,
     terminadosComponent,
     agregarComponent,
-    placeholderPipe
+    placeholderPipe,
+    PendientePipe,
+    terminadosPipe,
+    DetalleComponent
 
   ],
   imports: [
@@ -38,7 +45,8 @@ import { placeholderPipe } from "../pipes/placeholder.pipe";
     TabsPage,
     pendientesComponent,
     terminadosComponent,
-    agregarComponent
+    agregarComponent,
+    DetalleComponent
   ],
   providers: [
     StatusBar,

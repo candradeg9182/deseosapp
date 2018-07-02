@@ -5,6 +5,8 @@ import { NavController } from "ionic-angular"; //navcontroller para moverse entr
 import { agregarComponent } from "../agregar/agregar.component"; 
 //agrego component ajeno para usar el NavCTRL.push y moverse a elHTML de ese component
 
+import { DetalleComponent } from "../detalle/detalle.component"; 
+
 
 @Component({
     selector: 'app-pendientes',
@@ -13,7 +15,7 @@ import { agregarComponent } from "../agregar/agregar.component";
 
 export class pendientesComponent implements OnInit {
     
-    constructor(private _listaDeseo:ListaDeseosService, 
+    constructor(private service:ListaDeseosService, 
                 private NavCtrl:NavController) //navcontroller para moverse entre pages
                 
                 {  }
@@ -23,6 +25,10 @@ export class pendientesComponent implements OnInit {
 
     irAgregar(){
         this.NavCtrl.push( agregarComponent )
+    }
+
+    verDetalle(lista, idx){
+        this.NavCtrl.push( DetalleComponent,{lista,idx} )
     }
 
 }

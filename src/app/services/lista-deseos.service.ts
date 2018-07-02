@@ -45,4 +45,9 @@ export class ListaDeseosService{
         this.actualizarData();
     }
 
+    desagregarLista(idx:number){
+        this.listas.splice(idx,1);
+        this.actualizarData();
+    }
+
 }
